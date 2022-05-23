@@ -7,13 +7,9 @@
 
 import UIKit
 
-protocol CabinetFlowControllerDelegate: AnyObject {
-    func cabinetFlowControllerDidFinish(_ flowcontroller: CabinetFlowController)
-}
-
 class CabinetFlowController: UITabBarController {
-    
-    weak var flowDelegate: CabinetFlowControllerDelegate?
+        
+    var didFinish: ((UITabBarController) -> Void)?
     
     func start() {
         var tabBars = [UIViewController]()
@@ -23,18 +19,16 @@ class CabinetFlowController: UITabBarController {
         tabBars.append(loginFlowController)
         
         let logoutFlowController = LogoutFlowController(rootViewController: LogoutViewController())
-        logoutFlowController.flowDelegate = self
+        
+        logoutFlowController.didFinish = { [weak self] flowController in
+            self!.didFinish?(self!)
+            self!.remove(childController: flowController)
+            self!.start()
+        }
+        
         logoutFlowController.start()
         tabBars.append(logoutFlowController)
         
         setViewControllers(tabBars, animated: false)
-    }
-}
-
-extension CabinetFlowController: LogoutFlowControllerDelegate {
-    func logoutFlowControllerDidFinish(_ flowController: LogoutFlowController) {
-        remove(childController: flowController)        
-//        flowDelegate?.cabinetFlowControllerDidFinish(self)
-        start()
     }
 }

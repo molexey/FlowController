@@ -7,23 +7,13 @@
 
 import UIKit
 
-protocol LogoutFlowControllerDelegate: AnyObject {
-    func logoutFlowControllerDidFinish(_ flowController: LogoutFlowController)
-}
-
 class LogoutFlowController: UINavigationController {
     
-    weak var flowDelegate: LogoutFlowControllerDelegate?
+    var didFinish: ((UINavigationController) -> Void)?
     
     func start() {
         self.setTabBarItem(imageName: "arrow.right.circle.fill", title: "LOGOUT")
         let logoutViewController = self.viewControllers.first as! LogoutViewController
-        logoutViewController.logoutButtonTapDelegate = self
-    }
-}
-
-extension LogoutFlowController: LogoutViewControllerDelegate {
-    func logoutViewControllerDidFinish(_ controller: LogoutViewController) {
-        flowDelegate?.logoutFlowControllerDidFinish(self)
+        logoutViewController.didFinish = { [weak self] in self?.didFinish!(self!) }
     }
 }

@@ -7,16 +7,13 @@
 
 import UIKit
 
-protocol LoginViewControllerDelegate: AnyObject {
-    func loginViewControllerDidFinish(_ controller: LoginViewController)
-}
 
 class LoginViewController : UIViewController {
     
     private let loginButton = UIButton()
-        
-    weak var loginButtonTapDelegate: LoginViewControllerDelegate?
-            
+    
+    var didFinish: (() -> Void)?
+                    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -35,6 +32,6 @@ class LoginViewController : UIViewController {
     }
     
     @objc func loginButtonTapped(_ sender: UIButton) {
-        loginButtonTapDelegate?.loginViewControllerDidFinish(self)
+        didFinish?()
     }
 }

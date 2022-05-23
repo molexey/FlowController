@@ -7,13 +7,9 @@
 
 import UIKit
 
-protocol TutorialViewControllerDelegate: AnyObject {
-    func tutorialViewControllerDidFinish(_ viewController: TutorialViewController)
-}
-
 class TutorialViewController: UIViewController {
     
-    weak var getStartedButtonTapDelegate: TutorialViewControllerDelegate?
+    var didFinish: (() -> Void)?
     
     private let getStartedButton = UIButton()
     
@@ -40,6 +36,6 @@ class TutorialViewController: UIViewController {
     }
     
     @objc func getStartedButtonTapped(_ sender: UIButton) {
-        getStartedButtonTapDelegate?.tutorialViewControllerDidFinish(self)
+        didFinish?()
     }
 }

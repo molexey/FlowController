@@ -7,16 +7,12 @@
 
 import UIKit
 
-protocol LogoutViewControllerDelegate: AnyObject {
-    func logoutViewControllerDidFinish(_ controller: LogoutViewController)
-}
-
 class LogoutViewController : UIViewController {
+    
+    var didFinish: (() -> Void)?
     
     private let logoutButton = UIButton()
     
-    weak var logoutButtonTapDelegate: LogoutViewControllerDelegate?
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -37,6 +33,6 @@ class LogoutViewController : UIViewController {
     
     @objc func logoutButtonTapped(_ sender: UIButton) {
         AuthService.isAuthorized = false
-        logoutButtonTapDelegate?.logoutViewControllerDidFinish(self)
+        didFinish?()
     }
 }

@@ -7,22 +7,12 @@
 
 import UIKit
 
-protocol TutorialFlowControllerDelegate: AnyObject {
-    func tutorialFlowControllerDidFinish(_ flowController: TutorialFlowController)
-}
-
 class TutorialFlowController: UINavigationController {
     
-    weak var flowDelegate: TutorialFlowControllerDelegate?
+    var didFinish: ((UINavigationController) -> Void)?
     
     func start() {
         let viewController = self.viewControllers.first as? TutorialViewController
-        viewController!.getStartedButtonTapDelegate = self
-    }
-}
-
-extension TutorialFlowController: TutorialViewControllerDelegate {
-    func tutorialViewControllerDidFinish(_ viewController: TutorialViewController) {
-        flowDelegate?.tutorialFlowControllerDidFinish(self)
+        viewController?.didFinish = { [weak self]  in self?.didFinish!(self!) }
     }
 }

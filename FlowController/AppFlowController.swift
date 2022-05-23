@@ -19,29 +19,20 @@ final class AppFlowController: UIViewController {
     
     private func startTutorial() {
         let tutorialFlowController = TutorialFlowController(rootViewController: TutorialViewController())
-        tutorialFlowController.flowDelegate = self
+        tutorialFlowController.didFinish = { [weak self] flowController in
+            self!.remove(childController: flowController)
+            self!.startCabinet()
+        }
         add(childController: tutorialFlowController)
         tutorialFlowController.start()
     }
     
     private func startCabinet() {
         let cabinetFlowController = CabinetFlowController()
-        cabinetFlowController.flowDelegate = self
+        cabinetFlowController.didFinish = { [weak self] flowController in            //startSomething()
+            //self!.remove(childController: flowController)
+        }
         add(childController: cabinetFlowController)
         cabinetFlowController.start()
-    }
-}
-
-extension AppFlowController: TutorialFlowControllerDelegate {
-    func tutorialFlowControllerDidFinish(_ flowController: TutorialFlowController) {
-        remove(childController: flowController)
-        startCabinet()
-    }
-}
-
-extension AppFlowController: CabinetFlowControllerDelegate {
-    func cabinetFlowControllerDidFinish(_ flowController: CabinetFlowController) {
-        remove(childController: flowController)
-        //doSomething()
     }
 }

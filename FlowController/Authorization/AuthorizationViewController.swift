@@ -7,14 +7,10 @@
 
 import UIKit
 
-protocol AuthorizationViewControllerDelegate: AnyObject {
-    func authorizationViewControllerDidFinish(_ controller: AuthorizationViewController)
-}
-
 class AuthorizationViewController : UIViewController {
     
-    weak var authorizeButtonTapDelegate: AuthorizationViewControllerDelegate?
-    
+    var didFinish: (() -> Void)?
+        
     let authorizationButton = UIButton()
         
     override func viewDidLoad() {
@@ -36,8 +32,7 @@ class AuthorizationViewController : UIViewController {
     }
     
     @objc func authorizationButtonTapped(_ sender: UIButton) {
-        authorizeButtonTapDelegate?.authorizationViewControllerDidFinish(self)
         AuthService.isAuthorized = true
+        didFinish?()
     }
-    
 }

@@ -7,39 +7,27 @@
 
 import UIKit
 
-protocol LoginFlowControllerDelegate: AnyObject {
-    func loginFlowControllerDidFinish(_ flowController: LoginFlowController)
-}
-
 class LoginFlowController: UINavigationController {
-    
-    weak var flowDelegate: LoginFlowControllerDelegate?
+        
+    var didFinish: (() -> Void)?
     
     func start() {
         self.setTabBarItem(imageName: "person.circle.fill", title: "LOGIN")
+        
         let loginViewController = self.viewControllers.first as! LoginViewController
         
-        loginViewController.loginButtonTapDelegate = self
+        loginViewController.didFinish = { [weak self] in self!.startAuthorization() }
     }
     
     func startAuthorization() {
         let authorizationFlowController = AuthorizationFlowController(rootViewController: AuthorizationViewController())
         
-        authorizationFlowController.flowDelegate = self
         authorizationFlowController.start()
         
+        authorizationFlowController.didFinish = { [weak self] flowController in
+            self!.didFinish?()
+            flowController.dismiss(animated: true, completion: nil)
+        }
         present(authorizationFlowController, animated: true)
-    }
-}
-
-extension LoginFlowController: AuthorizationFlowControllerDelegate {
-    func authorizationFlowControllerDidFinish(_ flowController: AuthorizationFlowController) {
-        flowController.dismiss(animated: true, completion: nil)
-    }
-}
-
-extension LoginFlowController: LoginViewControllerDelegate {
-    func loginViewControllerDidFinish(_ viewController: LoginViewController) {
-        startAuthorization()
     }
 }

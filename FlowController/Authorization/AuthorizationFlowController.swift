@@ -7,23 +7,14 @@
 
 import UIKit
 
-protocol AuthorizationFlowControllerDelegate: AnyObject {
-    func authorizationFlowControllerDidFinish(_ flowController: AuthorizationFlowController)
-}
 
 class AuthorizationFlowController: UINavigationController {
-    
-    weak var flowDelegate: AuthorizationFlowControllerDelegate?
+        
+    var didFinish: ((UINavigationController) -> Void)?
             
     func start() {
-        let controller = self.viewControllers.first as? AuthorizationViewController
-        controller!.authorizeButtonTapDelegate = self        
-    }
-}
-
-extension AuthorizationFlowController: AuthorizationViewControllerDelegate {
-    func authorizationViewControllerDidFinish(_ controller: AuthorizationViewController) {
-        flowDelegate?.authorizationFlowControllerDidFinish(self)
-//        self.dismiss(animated: true, completion: nil)
+        let authorizationViewController = self.viewControllers.first as? AuthorizationViewController
+        
+        authorizationViewController?.didFinish = { [weak self] in self?.didFinish!(self!) }
     }
 }
