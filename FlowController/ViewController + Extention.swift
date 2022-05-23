@@ -13,7 +13,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .systemGray2
     }
-    
 }
 
 extension UIViewController {

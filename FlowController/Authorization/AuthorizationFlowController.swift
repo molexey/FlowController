@@ -5,28 +5,25 @@
 //  Created by molexey on 13.05.2022.
 //
 
-import Foundation
 import UIKit
+
+protocol AuthorizationFlowControllerDelegate: AnyObject {
+    func authorizationFlowControllerDidFinish(_ flowController: AuthorizationFlowController)
+}
 
 class AuthorizationFlowController: UINavigationController {
     
-    var authorizationDidFinish: ((UIViewController) -> Void)?
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    weak var flowDelegate: AuthorizationFlowControllerDelegate?
+            
     func start() {
-        let authorizationViewController = AuthorizationViewController()
-        authorizationViewController.authorizationDidFinish = authorizationDidFinish
-        self.pushViewController(authorizationViewController, animated: true)
+        let controller = self.viewControllers.first as? AuthorizationViewController
+        controller!.authorizeButtonTapDelegate = self        
+    }
+}
+
+extension AuthorizationFlowController: AuthorizationViewControllerDelegate {
+    func authorizationViewControllerDidFinish(_ controller: AuthorizationViewController) {
+        flowDelegate?.authorizationFlowControllerDidFinish(self)
+//        self.dismiss(animated: true, completion: nil)
     }
 }

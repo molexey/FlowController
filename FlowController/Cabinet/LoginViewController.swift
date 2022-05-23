@@ -7,12 +7,16 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate: AnyObject {
+    func loginViewControllerDidFinish(_ controller: LoginViewController)
+}
+
 class LoginViewController : UIViewController {
     
     private let loginButton = UIButton()
-    
-    var presentAuthorization: (() -> Void)?
-    
+        
+    weak var loginButtonTapDelegate: LoginViewControllerDelegate?
+            
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -31,8 +35,6 @@ class LoginViewController : UIViewController {
     }
     
     @objc func loginButtonTapped(_ sender: UIButton) {
-        if let presentAuthorization = presentAuthorization {
-            presentAuthorization()
-        }
+        loginButtonTapDelegate?.loginViewControllerDidFinish(self)
     }
 }

@@ -8,14 +8,14 @@
 import UIKit
 
 protocol TutorialViewControllerDelegate: AnyObject {
-    func tutorialViewControllerDidFinish(_ controller: TutorialViewController)
+    func tutorialViewControllerDidFinish(_ viewController: TutorialViewController)
 }
 
 class TutorialViewController: UIViewController {
     
     weak var getStartedButtonTapDelegate: TutorialViewControllerDelegate?
     
-    let getStartedButton = UIButton()
+    private let getStartedButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()

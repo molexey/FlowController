@@ -7,35 +7,39 @@
 
 import UIKit
 
-final class LoginFlowController: UINavigationController {
+protocol LoginFlowControllerDelegate: AnyObject {
+    func loginFlowControllerDidFinish(_ flowController: LoginFlowController)
+}
+
+class LoginFlowController: UINavigationController {
+    
+    weak var flowDelegate: LoginFlowControllerDelegate?
+    
+    func start() {
+        self.setTabBarItem(imageName: "person.circle.fill", title: "LOGIN")
+        let loginViewController = self.viewControllers.first as! LoginViewController
         
-    private lazy var loginViewController = LoginViewController()
-    
-    init() {
-        super.init(nibName: nil, bundle: nil)
+        loginViewController.loginButtonTapDelegate = self
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    private lazy var presentAuthorization: (() -> Void) = { [weak self] in
-        let authorizationFlowController = AuthorizationFlowController()
-        authorizationFlowController.authorizationDidFinish = self?.authorizationDidFinish
+    func startAuthorization() {
+        let authorizationFlowController = AuthorizationFlowController(rootViewController: AuthorizationViewController())
+        
+        authorizationFlowController.flowDelegate = self
         authorizationFlowController.start()
-        self?.present(authorizationFlowController, animated: true)
-    }
-    
-    private lazy var authorizationDidFinish: ((UIViewController) -> Void) = { viewController in
-        viewController.dismiss(animated: true, completion: nil)
-        self.loginViewController.viewWillAppear(true)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
         
-        loginViewController.presentAuthorization = presentAuthorization
-        self.pushViewController(loginViewController, animated: true)
+        present(authorizationFlowController, animated: true)
+    }
+}
+
+extension LoginFlowController: AuthorizationFlowControllerDelegate {
+    func authorizationFlowControllerDidFinish(_ flowController: AuthorizationFlowController) {
+        flowController.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension LoginFlowController: LoginViewControllerDelegate {
+    func loginViewControllerDidFinish(_ viewController: LoginViewController) {
+        startAuthorization()
     }
 }

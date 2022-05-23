@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE6CD58A282CFCDE0004BBAE /* TutotialFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD589282CFCDE0004BBAE /* TutotialFlowController.swift */; };
+		CE4DB39A2837E2BE00ADB6A6 /* CabinetTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DB3992837E2BE00ADB6A6 /* CabinetTabBarController.swift */; };
+		CE6CD58A282CFCDE0004BBAE /* TutorialFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD589282CFCDE0004BBAE /* TutorialFlowController.swift */; };
 		CE6CD58C282CFD790004BBAE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD58B282CFD790004BBAE /* TutorialViewController.swift */; };
 		CE6CD58E282D1CBA0004BBAE /* CabinetFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD58D282D1CBA0004BBAE /* CabinetFlowController.swift */; };
 		CE6CD590282D3DE10004BBAE /* LoginFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD58F282D3DE10004BBAE /* LoginFlowController.swift */; };
@@ -23,10 +24,12 @@
 		CEC933CE282BCDEB0086C734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC933CC282BCDEB0086C734 /* LaunchScreen.storyboard */; };
 		CEC933E0282C5EDD0086C734 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC933DF282C5EDD0086C734 /* AppFlowController.swift */; };
 		CEC933E2282C67940086C734 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC933E1282C67940086C734 /* DependencyContainer.swift */; };
+		CEE605D72837A8FB009194B5 /* LogoutFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE6CD589282CFCDE0004BBAE /* TutotialFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutotialFlowController.swift; sourceTree = "<group>"; };
+		CE4DB3992837E2BE00ADB6A6 /* CabinetTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetTabBarController.swift; sourceTree = "<group>"; };
+		CE6CD589282CFCDE0004BBAE /* TutorialFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialFlowController.swift; sourceTree = "<group>"; };
 		CE6CD58B282CFD790004BBAE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		CE6CD58D282D1CBA0004BBAE /* CabinetFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetFlowController.swift; sourceTree = "<group>"; };
 		CE6CD58F282D3DE10004BBAE /* LoginFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowController.swift; sourceTree = "<group>"; };
@@ -44,6 +47,7 @@
 		CEC933CF282BCDEB0086C734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC933DF282C5EDD0086C734 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		CEC933E1282C67940086C734 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
+		CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +65,11 @@
 			isa = PBXGroup;
 			children = (
 				CE6CD58D282D1CBA0004BBAE /* CabinetFlowController.swift */,
+				CE4DB3992837E2BE00ADB6A6 /* CabinetTabBarController.swift */,
 				CE6CD593282D4F5F0004BBAE /* LoginViewController.swift */,
 				CE6CD58F282D3DE10004BBAE /* LoginFlowController.swift */,
 				CE6CD595282D5EC90004BBAE /* LogoutViewController.swift */,
+				CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */,
 			);
 			path = Cabinet;
 			sourceTree = "<group>";
@@ -71,7 +77,7 @@
 		CE6CD59A282D965B0004BBAE /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				CE6CD589282CFCDE0004BBAE /* TutotialFlowController.swift */,
+				CE6CD589282CFCDE0004BBAE /* TutorialFlowController.swift */,
 				CE6CD58B282CFD790004BBAE /* TutorialViewController.swift */,
 			);
 			path = Tutorial;
@@ -192,7 +198,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6CD594282D4F5F0004BBAE /* LoginViewController.swift in Sources */,
-				CE6CD58A282CFCDE0004BBAE /* TutotialFlowController.swift in Sources */,
+				CEE605D72837A8FB009194B5 /* LogoutFlowController.swift in Sources */,
+				CE6CD58A282CFCDE0004BBAE /* TutorialFlowController.swift in Sources */,
 				CE6CD592282D4E970004BBAE /* AuthorizationViewController.swift in Sources */,
 				CE6CD596282D5EC90004BBAE /* LogoutViewController.swift in Sources */,
 				CE6CD58E282D1CBA0004BBAE /* CabinetFlowController.swift in Sources */,
@@ -204,6 +211,7 @@
 				CE6CD590282D3DE10004BBAE /* LoginFlowController.swift in Sources */,
 				CEC933C2282BCDEA0086C734 /* AppDelegate.swift in Sources */,
 				CEC933C4282BCDEA0086C734 /* SceneDelegate.swift in Sources */,
+				CE4DB39A2837E2BE00ADB6A6 /* CabinetTabBarController.swift in Sources */,
 				CEC933E0282C5EDD0086C734 /* AppFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

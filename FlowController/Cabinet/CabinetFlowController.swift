@@ -7,21 +7,34 @@
 
 import UIKit
 
+protocol CabinetFlowControllerDelegate: AnyObject {
+    func cabinetFlowControllerDidFinish(_ flowcontroller: CabinetFlowController)
+}
+
 class CabinetFlowController: UITabBarController {
     
-    func start() {
-        let loginFlowController = LoginFlowController()
-        let logoutController = LogoutViewController()
-        
-        loginFlowController.tabBarItem = UITabBarItem(title: "LOGIN", image: UIImage(systemName: "person.circle.fill"), selectedImage: UIImage(systemName: "person.circle.fill"))
-        
-        logoutController.tabBarItem = UITabBarItem(title: "LOGOUT", image: UIImage(systemName: "arrow.right.circle.fill"), selectedImage: UIImage(systemName: "arrow.right.circle.fill"))
-        
-        viewControllers = [loginFlowController, logoutController]
-    }
+    weak var flowDelegate: CabinetFlowControllerDelegate?
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    func start() {
+        var tabBars = [UIViewController]()
+        
+        let loginFlowController = LoginFlowController(rootViewController: LoginViewController())
+        loginFlowController.start()
+        tabBars.append(loginFlowController)
+        
+        let logoutFlowController = LogoutFlowController(rootViewController: LogoutViewController())
+        logoutFlowController.flowDelegate = self
+        logoutFlowController.start()
+        tabBars.append(logoutFlowController)
+        
+        setViewControllers(tabBars, animated: false)
+    }
+}
+
+extension CabinetFlowController: LogoutFlowControllerDelegate {
+    func logoutFlowControllerDidFinish(_ flowController: LogoutFlowController) {
+        remove(childController: flowController)        
+//        flowDelegate?.cabinetFlowControllerDidFinish(self)
+        start()
     }
 }
