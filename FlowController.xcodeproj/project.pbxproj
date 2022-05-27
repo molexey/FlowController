@@ -23,7 +23,6 @@
 		CEC933CB282BCDEB0086C734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC933CA282BCDEB0086C734 /* Assets.xcassets */; };
 		CEC933CE282BCDEB0086C734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC933CC282BCDEB0086C734 /* LaunchScreen.storyboard */; };
 		CEC933E0282C5EDD0086C734 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC933DF282C5EDD0086C734 /* AppFlowController.swift */; };
-		CEC933E2282C67940086C734 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC933E1282C67940086C734 /* DependencyContainer.swift */; };
 		CEE605D72837A8FB009194B5 /* LogoutFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +45,6 @@
 		CEC933CD282BCDEB0086C734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC933CF282BCDEB0086C734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC933DF282C5EDD0086C734 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
-		CEC933E1282C67940086C734 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,19 +59,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE6CD597282D5F040004BBAE /* Cabinet */ = {
-			isa = PBXGroup;
-			children = (
-				CE6CD58D282D1CBA0004BBAE /* CabinetFlowController.swift */,
-				CE4DB3992837E2BE00ADB6A6 /* CabinetTabBarController.swift */,
-				CE6CD593282D4F5F0004BBAE /* LoginViewController.swift */,
-				CE6CD58F282D3DE10004BBAE /* LoginFlowController.swift */,
-				CE6CD595282D5EC90004BBAE /* LogoutViewController.swift */,
-				CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */,
-			);
-			path = Cabinet;
-			sourceTree = "<group>";
-		};
 		CE6CD59A282D965B0004BBAE /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +75,34 @@
 				CE6CD591282D4E970004BBAE /* AuthorizationViewController.swift */,
 			);
 			path = Authorization;
+			sourceTree = "<group>";
+		};
+		CEBE7F312841032000B906BF /* Cabinet */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CD58D282D1CBA0004BBAE /* CabinetFlowController.swift */,
+				CE4DB3992837E2BE00ADB6A6 /* CabinetTabBarController.swift */,
+			);
+			name = Cabinet;
+			path = Tutorial/Cabinet;
+			sourceTree = "<group>";
+		};
+		CEBE7F322841033000B906BF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CD593282D4F5F0004BBAE /* LoginViewController.swift */,
+				CE6CD58F282D3DE10004BBAE /* LoginFlowController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CEBE7F332841034000B906BF /* Logout */ = {
+			isa = PBXGroup;
+			children = (
+				CE6CD595282D5EC90004BBAE /* LogoutViewController.swift */,
+				CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */,
+			);
+			path = Logout;
 			sourceTree = "<group>";
 		};
 		CEC933B5282BCDEA0086C734 = {
@@ -115,11 +128,12 @@
 				CEC933C3282BCDEA0086C734 /* SceneDelegate.swift */,
 				CEC933DF282C5EDD0086C734 /* AppFlowController.swift */,
 				CE6CD598282D63EC0004BBAE /* AuthService.swift */,
-				CE97CAC4282E7A040088ED06 /* Authorization */,
 				CE6CD59A282D965B0004BBAE /* Tutorial */,
-				CE6CD597282D5F040004BBAE /* Cabinet */,
+				CEBE7F312841032000B906BF /* Cabinet */,
+				CEBE7F322841033000B906BF /* Login */,
+				CE97CAC4282E7A040088ED06 /* Authorization */,
+				CEBE7F332841034000B906BF /* Logout */,
 				CEC933C5282BCDEA0086C734 /* ViewController + Extention.swift */,
-				CEC933E1282C67940086C734 /* DependencyContainer.swift */,
 				CEC933CA282BCDEB0086C734 /* Assets.xcassets */,
 				CEC933CC282BCDEB0086C734 /* LaunchScreen.storyboard */,
 				CEC933CF282BCDEB0086C734 /* Info.plist */,
@@ -207,7 +221,6 @@
 				CE6CD599282D63EC0004BBAE /* AuthService.swift in Sources */,
 				CE97CAC3282E43570088ED06 /* AuthorizationFlowController.swift in Sources */,
 				CEC933C6282BCDEA0086C734 /* ViewController + Extention.swift in Sources */,
-				CEC933E2282C67940086C734 /* DependencyContainer.swift in Sources */,
 				CE6CD590282D3DE10004BBAE /* LoginFlowController.swift in Sources */,
 				CEC933C2282BCDEA0086C734 /* AppDelegate.swift in Sources */,
 				CEC933C4282BCDEA0086C734 /* SceneDelegate.swift in Sources */,
