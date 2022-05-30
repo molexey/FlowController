@@ -6,10 +6,13 @@
 //
 
 import UIKit
+import CabinetKit
+import AuthorizationKit
+import TutorialKit
 
 final class AppFlowController: UIViewController {
     
-    func start() {
+    public func start() {
         if AuthService.isAuthorized {
             startCabinet()
         } else {
@@ -29,7 +32,8 @@ final class AppFlowController: UIViewController {
     
     private func startCabinet() {
         let cabinetFlowController = CabinetFlowController()
-        cabinetFlowController.didFinish = { [weak self] flowController in            //startSomething()
+        cabinetFlowController.didFinish = { [weak self] flowController in
+            //startSomething()
             //self!.remove(childController: flowController)
         }
         add(childController: cabinetFlowController)

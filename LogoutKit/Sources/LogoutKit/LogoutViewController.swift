@@ -6,14 +6,15 @@
 //
 
 import UIKit
+import AuthorizationKit
 
-class LogoutViewController : UIViewController {
+public class LogoutViewController : UIViewController {
     
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
     
     private let logoutButton = UIButton()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         

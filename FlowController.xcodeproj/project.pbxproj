@@ -7,45 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CE4DB39A2837E2BE00ADB6A6 /* CabinetTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4DB3992837E2BE00ADB6A6 /* CabinetTabBarController.swift */; };
-		CE6CD58A282CFCDE0004BBAE /* TutorialFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD589282CFCDE0004BBAE /* TutorialFlowController.swift */; };
-		CE6CD58C282CFD790004BBAE /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD58B282CFD790004BBAE /* TutorialViewController.swift */; };
-		CE6CD58E282D1CBA0004BBAE /* CabinetFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD58D282D1CBA0004BBAE /* CabinetFlowController.swift */; };
-		CE6CD590282D3DE10004BBAE /* LoginFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD58F282D3DE10004BBAE /* LoginFlowController.swift */; };
-		CE6CD592282D4E970004BBAE /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD591282D4E970004BBAE /* AuthorizationViewController.swift */; };
-		CE6CD594282D4F5F0004BBAE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD593282D4F5F0004BBAE /* LoginViewController.swift */; };
-		CE6CD596282D5EC90004BBAE /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD595282D5EC90004BBAE /* LogoutViewController.swift */; };
-		CE6CD599282D63EC0004BBAE /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6CD598282D63EC0004BBAE /* AuthService.swift */; };
-		CE97CAC3282E43570088ED06 /* AuthorizationFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE97CAC2282E43570088ED06 /* AuthorizationFlowController.swift */; };
+		CE4B254C2843A889004CECE9 /* CabinetKit in Frameworks */ = {isa = PBXBuildFile; productRef = CE4B254B2843A889004CECE9 /* CabinetKit */; };
 		CEC933C2282BCDEA0086C734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC933C1282BCDEA0086C734 /* AppDelegate.swift */; };
 		CEC933C4282BCDEA0086C734 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC933C3282BCDEA0086C734 /* SceneDelegate.swift */; };
-		CEC933C6282BCDEA0086C734 /* ViewController + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC933C5282BCDEA0086C734 /* ViewController + Extention.swift */; };
+		CEC933C6282BCDEA0086C734 /* ViewController + Extentsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC933C5282BCDEA0086C734 /* ViewController + Extentsion.swift */; };
 		CEC933CB282BCDEB0086C734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEC933CA282BCDEB0086C734 /* Assets.xcassets */; };
 		CEC933CE282BCDEB0086C734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEC933CC282BCDEB0086C734 /* LaunchScreen.storyboard */; };
 		CEC933E0282C5EDD0086C734 /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC933DF282C5EDD0086C734 /* AppFlowController.swift */; };
-		CEE605D72837A8FB009194B5 /* LogoutFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CE4DB3992837E2BE00ADB6A6 /* CabinetTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetTabBarController.swift; sourceTree = "<group>"; };
-		CE6CD589282CFCDE0004BBAE /* TutorialFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialFlowController.swift; sourceTree = "<group>"; };
-		CE6CD58B282CFD790004BBAE /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
-		CE6CD58D282D1CBA0004BBAE /* CabinetFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CabinetFlowController.swift; sourceTree = "<group>"; };
-		CE6CD58F282D3DE10004BBAE /* LoginFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowController.swift; sourceTree = "<group>"; };
-		CE6CD591282D4E970004BBAE /* AuthorizationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
-		CE6CD593282D4F5F0004BBAE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		CE6CD595282D5EC90004BBAE /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
-		CE6CD598282D63EC0004BBAE /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		CE97CAC2282E43570088ED06 /* AuthorizationFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationFlowController.swift; sourceTree = "<group>"; };
+		CE4B2521284397BE004CECE9 /* CabinetKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = CabinetKit; sourceTree = "<group>"; };
+		CE4B252C28439FE5004CECE9 /* TutorialKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = TutorialKit; sourceTree = "<group>"; };
+		CEBE7F39284123AB00B906BF /* LoginKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = LoginKit; sourceTree = "<group>"; };
+		CEBE7F4028412E1300B906BF /* AuthorizationKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = AuthorizationKit; sourceTree = "<group>"; };
+		CEBE7F462841303400B906BF /* LogoutKit */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = LogoutKit; sourceTree = "<group>"; };
 		CEC933BE282BCDEA0086C734 /* FlowController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEC933C1282BCDEA0086C734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEC933C3282BCDEA0086C734 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEC933C5282BCDEA0086C734 /* ViewController + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extention.swift"; sourceTree = "<group>"; };
+		CEC933C5282BCDEA0086C734 /* ViewController + Extentsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController + Extentsion.swift"; sourceTree = "<group>"; };
 		CEC933CA282BCDEB0086C734 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEC933CD282BCDEB0086C734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEC933CF282BCDEB0086C734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEC933DF282C5EDD0086C734 /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
-		CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutFlowController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,63 +37,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE4B254C2843A889004CECE9 /* CabinetKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE6CD59A282D965B0004BBAE /* Tutorial */ = {
+		CEBE7F3528411B8400B906BF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CE6CD589282CFCDE0004BBAE /* TutorialFlowController.swift */,
-				CE6CD58B282CFD790004BBAE /* TutorialViewController.swift */,
 			);
-			path = Tutorial;
-			sourceTree = "<group>";
-		};
-		CE97CAC4282E7A040088ED06 /* Authorization */ = {
-			isa = PBXGroup;
-			children = (
-				CE97CAC2282E43570088ED06 /* AuthorizationFlowController.swift */,
-				CE6CD591282D4E970004BBAE /* AuthorizationViewController.swift */,
-			);
-			path = Authorization;
-			sourceTree = "<group>";
-		};
-		CEBE7F312841032000B906BF /* Cabinet */ = {
-			isa = PBXGroup;
-			children = (
-				CE6CD58D282D1CBA0004BBAE /* CabinetFlowController.swift */,
-				CE4DB3992837E2BE00ADB6A6 /* CabinetTabBarController.swift */,
-			);
-			name = Cabinet;
-			path = Tutorial/Cabinet;
-			sourceTree = "<group>";
-		};
-		CEBE7F322841033000B906BF /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				CE6CD593282D4F5F0004BBAE /* LoginViewController.swift */,
-				CE6CD58F282D3DE10004BBAE /* LoginFlowController.swift */,
-			);
-			path = Login;
-			sourceTree = "<group>";
-		};
-		CEBE7F332841034000B906BF /* Logout */ = {
-			isa = PBXGroup;
-			children = (
-				CE6CD595282D5EC90004BBAE /* LogoutViewController.swift */,
-				CEE605D62837A8FB009194B5 /* LogoutFlowController.swift */,
-			);
-			path = Logout;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CEC933B5282BCDEA0086C734 = {
 			isa = PBXGroup;
 			children = (
+				CE4B252C28439FE5004CECE9 /* TutorialKit */,
+				CEBE7F462841303400B906BF /* LogoutKit */,
+				CEBE7F4028412E1300B906BF /* AuthorizationKit */,
+				CEBE7F39284123AB00B906BF /* LoginKit */,
+				CE4B2521284397BE004CECE9 /* CabinetKit */,
 				CEC933C0282BCDEA0086C734 /* FlowController */,
 				CEC933BF282BCDEA0086C734 /* Products */,
+				CEBE7F3528411B8400B906BF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -127,13 +79,7 @@
 				CEC933C1282BCDEA0086C734 /* AppDelegate.swift */,
 				CEC933C3282BCDEA0086C734 /* SceneDelegate.swift */,
 				CEC933DF282C5EDD0086C734 /* AppFlowController.swift */,
-				CE6CD598282D63EC0004BBAE /* AuthService.swift */,
-				CE6CD59A282D965B0004BBAE /* Tutorial */,
-				CEBE7F312841032000B906BF /* Cabinet */,
-				CEBE7F322841033000B906BF /* Login */,
-				CE97CAC4282E7A040088ED06 /* Authorization */,
-				CEBE7F332841034000B906BF /* Logout */,
-				CEC933C5282BCDEA0086C734 /* ViewController + Extention.swift */,
+				CEC933C5282BCDEA0086C734 /* ViewController + Extentsion.swift */,
 				CEC933CA282BCDEB0086C734 /* Assets.xcassets */,
 				CEC933CC282BCDEB0086C734 /* LaunchScreen.storyboard */,
 				CEC933CF282BCDEB0086C734 /* Info.plist */,
@@ -157,6 +103,9 @@
 			dependencies = (
 			);
 			name = FlowController;
+			packageProductDependencies = (
+				CE4B254B2843A889004CECE9 /* CabinetKit */,
+			);
 			productName = FlowController;
 			productReference = CEC933BE282BCDEA0086C734 /* FlowController.app */;
 			productType = "com.apple.product-type.application";
@@ -211,20 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE6CD594282D4F5F0004BBAE /* LoginViewController.swift in Sources */,
-				CEE605D72837A8FB009194B5 /* LogoutFlowController.swift in Sources */,
-				CE6CD58A282CFCDE0004BBAE /* TutorialFlowController.swift in Sources */,
-				CE6CD592282D4E970004BBAE /* AuthorizationViewController.swift in Sources */,
-				CE6CD596282D5EC90004BBAE /* LogoutViewController.swift in Sources */,
-				CE6CD58E282D1CBA0004BBAE /* CabinetFlowController.swift in Sources */,
-				CE6CD58C282CFD790004BBAE /* TutorialViewController.swift in Sources */,
-				CE6CD599282D63EC0004BBAE /* AuthService.swift in Sources */,
-				CE97CAC3282E43570088ED06 /* AuthorizationFlowController.swift in Sources */,
-				CEC933C6282BCDEA0086C734 /* ViewController + Extention.swift in Sources */,
-				CE6CD590282D3DE10004BBAE /* LoginFlowController.swift in Sources */,
+				CEC933C6282BCDEA0086C734 /* ViewController + Extentsion.swift in Sources */,
 				CEC933C2282BCDEA0086C734 /* AppDelegate.swift in Sources */,
 				CEC933C4282BCDEA0086C734 /* SceneDelegate.swift in Sources */,
-				CE4DB39A2837E2BE00ADB6A6 /* CabinetTabBarController.swift in Sources */,
 				CEC933E0282C5EDD0086C734 /* AppFlowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +373,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE4B254B2843A889004CECE9 /* CabinetKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CabinetKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEC933B6282BCDEA0086C734 /* Project object */;
 }

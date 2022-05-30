@@ -7,13 +7,13 @@
 
 import UIKit
 
-class AuthorizationViewController : UIViewController {
+public class AuthorizationViewController : UIViewController {
     
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
         
     let authorizationButton = UIButton()
         
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         title = "Please authorize"
         view.backgroundColor = .systemBackground

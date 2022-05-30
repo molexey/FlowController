@@ -7,15 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemGray2
-    }
-}
-
-extension UIViewController {
+public extension UIViewController {
     func add(childController: UIViewController) {
         addChild(childController)
         view.addSubview(childController.view)

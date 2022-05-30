@@ -7,13 +7,13 @@
 
 import UIKit
 
-class TutorialViewController: UIViewController {
+public class TutorialViewController: UIViewController {
     
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
     
     private let getStartedButton = UIButton()
     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         setup()
     }

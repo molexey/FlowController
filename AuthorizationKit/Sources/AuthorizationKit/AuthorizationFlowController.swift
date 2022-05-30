@@ -7,12 +7,11 @@
 
 import UIKit
 
-
-class AuthorizationFlowController: UINavigationController {
-        
-    var didFinish: ((UINavigationController) -> Void)?
-            
-    func start() {
+public class AuthorizationFlowController: UINavigationController {
+    
+    public var didFinish: ((UINavigationController) -> Void)?
+    
+    public func start() {
         let authorizationViewController = self.viewControllers.first as? AuthorizationViewController
         
         authorizationViewController?.didFinish = { [weak self] in self?.didFinish!(self!) }

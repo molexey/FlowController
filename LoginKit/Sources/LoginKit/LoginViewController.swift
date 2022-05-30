@@ -7,14 +7,13 @@
 
 import UIKit
 
-
-class LoginViewController : UIViewController {
+public class LoginViewController : UIViewController {
     
     private let loginButton = UIButton()
     
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
                     
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         

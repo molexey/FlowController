@@ -6,12 +6,13 @@
 //
 
 import UIKit
+import AuthorizationKit
 
-class LoginFlowController: UINavigationController {
+public class LoginFlowController: UINavigationController {
         
-    var didFinish: (() -> Void)?
+    public var didFinish: (() -> Void)?
     
-    func start() {
+    public func start() {
         self.setTabBarItem(imageName: "person.circle.fill", title: "LOGIN")
         
         let loginViewController = self.viewControllers.first as! LoginViewController
@@ -29,5 +30,13 @@ class LoginFlowController: UINavigationController {
             flowController.dismiss(animated: true, completion: nil)
         }
         present(authorizationFlowController, animated: true)
+    }
+}
+
+public extension UIViewController {
+    func setTabBarItem(imageName: String, title: String) {
+        let configuration = UIImage.SymbolConfiguration(scale: .large)
+        let image = UIImage(systemName: imageName, withConfiguration: configuration)
+        tabBarItem = UITabBarItem(title: title, image: image, tag: 0)
     }
 }

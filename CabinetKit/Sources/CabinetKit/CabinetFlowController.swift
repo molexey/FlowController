@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import LoginKit
+import LogoutKit
 
-class CabinetFlowController: UITabBarController {
-        
-    var didFinish: ((UITabBarController) -> Void)?
+public class CabinetFlowController: UITabBarController {
     
-    func start() {
+    public var didFinish: ((UITabBarController) -> Void)?
+    
+    public func start() {
         var tabBars = [UIViewController]()
         
         let loginFlowController = LoginFlowController(rootViewController: LoginViewController())
@@ -19,13 +21,11 @@ class CabinetFlowController: UITabBarController {
         tabBars.append(loginFlowController)
         
         let logoutFlowController = LogoutFlowController(rootViewController: LogoutViewController())
-        
         logoutFlowController.didFinish = { [weak self] flowController in
             self!.didFinish?(self!)
             self!.remove(childController: flowController)
             self!.start()
         }
-        
         logoutFlowController.start()
         tabBars.append(logoutFlowController)
         

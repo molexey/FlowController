@@ -7,11 +7,11 @@
 
 import UIKit
 
-class TutorialFlowController: UINavigationController {
+public class TutorialFlowController: UINavigationController {
     
-    var didFinish: ((UINavigationController) -> Void)?
+    public var didFinish: ((UINavigationController) -> Void)?
     
-    func start() {
+    public func start() {
         let viewController = self.viewControllers.first as? TutorialViewController
         viewController?.didFinish = { [weak self]  in self?.didFinish!(self!) }
     }
